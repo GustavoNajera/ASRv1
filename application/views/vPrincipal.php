@@ -24,7 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="col s12 scrollflow -slide-right">
-          <h3>Search Destinations</h3>
+          <h3><?= $listPalabras["titulo seccion busqueda"]?></h3>
           <div class="input-field">
             <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Aruba, Cancun, etc...">
           </div>
@@ -111,9 +111,7 @@
   <!-- Section: Gallery -->
   <section id="gallery" class="section section-gallery scrollspy">
     <div class="container scrollflow -pop -opacity">
-      <h4 class="center">
-        <span class="green-text text-darken-2">Photo</span> Gallery
-      </h4>
+      <h4 class="center"><?= $listPalabras["titulo seccion galeria"] ?></h4>
       <div class="row">
         <div class="col s12 m3">
           <img src="https://source.unsplash.com/1600x900/?beach" alt="" class="materialboxed responsive-img">

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://www.asrcr.com:8080/ASR/';
+$config['base_url'] = 'http://www.asrcr.com:8080/ASRv1/';
 
 //$config['base_url'] = 'http://192.168.0.21:8080/ASR/';
 

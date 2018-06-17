@@ -29,7 +29,7 @@
                 <div class="card-action">
                     <a class="orange-text text-darken-3" 
                         href="<?= base_url() ?>cCursos/detCurso?id=<?= $curso["id"] ?>">
-                        <b><i class="material-icons">add_circle</i> Ver más</b>
+                        <b><i class="material-icons">add_circle</i> <?= $listPalabras["btn ver mas"] ?></b>
                     </a>
                 </div>
             </div>

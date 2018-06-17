@@ -1,19 +1,17 @@
-
-
-<!--<h1>Bienvenido <?php echo $this->session->userdata["nombre"] . " " . $this->session->userdata["primer_apellido"]; ?></h1>-->
-
 <!-- SECCION PARA DETALLE DE CURSOS -->
 <section>
     <div class="container">
         
-        <div class="margin_top_detalle">
+        <div class="margin_top_detalle marg_top">
             <div class="row">
-                <a class="btn btn-success" href="<?php echo base_url(); ?>cPersona/insertar">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Insertar Personas
-                </a>
+                <div class="col s12">
+                    <a class="btn green darken-3" href="<?php echo base_url(); ?>cPersona/insertar">
+                        <i class="material-icons">add_to_photos</i> Agregar
+                    </a>
+                </div>
             </div>
             
-            <div class="row" style="margin-top:50px;">
+            <div class="row">
                 <form method="POST" class="form-horizontal" action="<?php echo base_url(); ?>cPersona">
                     <div class="col s3 m3">
                         <input class="form-control" name="nombre" type="text" placeholder="Nombre">
@@ -28,8 +26,8 @@
                         <input class="form-control" name="fecha_finalizado" type="date">
                     </div>
                     <div class="col s3 m3">                    
-                        <button type="submit" class="btn btn-success" >
-                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+                        <button type="submit" class="btn orange darken-4">
+                            <i class="material-icons">search</i> Buscar
                         </button>
                     </div>
                 </form>
@@ -44,20 +42,20 @@
                         $listExpediente = $personaTem["expediente"];
                 ?>
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i> 
+                        <div class="collapsible-header"><i class="material-icons">assignment_ind</i> 
                             <?= $persona['nombre']." " . $persona['primer_apellido'] ?>
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
                                 <div class="col m4">
-                                    <div class="col s12">
+                                    <div class="col s9">
                                         <img class="responsive-img" src="<?= base_url() . $persona['img'] ?>">
                                     </div>
                                     <div class="col s12"><b>Cédula:</b> <?= $persona['cedula']; ?></div>
                                     <div class="col s12"><b>Rol:</b> <?= $persona['nombre_es']; ?></div>
                                     <div class="col s12"><b>Pais:</b> <?= $persona['pais'] ?></div>
                                     <div class="col s12">
-                                        <a class="btn grey" href="<?= base_url()."cPersona/actualizarPersona?id=".$persona['id_persona'];?>" 
+                                        <a class="btn grey darken-1" href="<?= base_url()."cPersona/actualizarPersona?id=".$persona['id_persona'];?>" 
                                             title="Editar">
                                             <i class="material-icons">edit</i>
                                         </a>
@@ -81,37 +79,41 @@
                                                 title="Activar">
                                                 <i class="material-icons" id="icon-<?= $persona['id_persona'] ?>">check</i>
                                             </a>
-                                        <?php }?>
+                                        <?php } ?>
                                     </div>
                                 </div>
                                 <div class="col m8">
-                                    <h4>Lista de cursos</h4>
-                                        <?php  if (count($listExpediente) == 0){ ?>
-                                            <h6 class="text-warning">No tiene cursos registrados</h6>
-                                        <?php 
-                                        } else{ ?>
-                                            <?php
-                                            foreach ($listExpediente as $expediente) { ?>
-                                                <h3><?= $expediente["curso"] ?></h3>
-                                                <div>
-                                                    <p><b>Notas: </b><?= $expediente["detalle"] ?></p>
-                                                    <p><b>Fecha Matriculado: </b><?= $expediente["fecha_matriculado"] ?></p>
-                                                    <p><b>Fecha Finalizado: </b><?= $expediente["fecha_finalizado"] ?></p>
-                                                    <p><b>Estado: <span class="text-important"><?= $expediente["estado"] ?> </span> </b></p>
-                                                    <?php 
-                                                    if($expediente["titulo"] != null && $expediente["titulo"] != ""){ ?>
-                                                        <a href="<?= base_url() . '/' . $expediente["titulo"]?>" style="color: #fff;" class="btn btn-success" 
-                                                            download="titulo del curso <?= $expediente["curso"] ?>"> Descargar Archivo
-                                                        </a>
-                                                    <?php 
-                                                    }else{ ?>
-                                                        <p class="text-primary">No hay archivos disponibles para descargar</p>
-                                                    <?php } ?>
-                                                </div>    
+                                    <div class="card-panel green text-center">
+                                        <h5 class="white-text"><i class="material-icons">book</i> Lista de cursos</h5>
+                                    </div>
+
+                                    <?php  if (count($listExpediente) == 0){ ?>
+                                        <h6 class="text-warning">No tiene cursos registrados</h6>
+                                    <?php 
+                                    } else{ ?>
+                                        <ul class="collection with-header"> 
                                         <?php
-                                            } // Fin foreach
-                                        } // Fin Else
-                                        ?>
+                                        foreach ($listExpediente as $expediente) { ?>
+                                            <li class="collection-item">
+                                                <b class="green-text darken-4"><i class="material-icons">assignment</i> <?= $expediente["curso"] ?></b>
+                                                <p><b>Notas: </b><?= $expediente["detalle"] ?></p>
+                                                <p><b>Fecha Matriculado: </b><?= $expediente["fecha_matriculado"] ?></p>
+                                                <p><b>Fecha Finalizado: </b><?= $expediente["fecha_finalizado"] ?></p>
+                                                <p><b>Estado: <span class="blue-text text-darken-4"><?= $expediente["estado"] ?> </span> </b></p>
+                                            <?php 
+                                            if($expediente["titulo"] != null && $expediente["titulo"] != ""){ ?>
+                                                <a href="<?= base_url() . '/' . $expediente["titulo"]?>" class="btn light-green darken-1" 
+                                                    download="titulo del curso <?= $expediente["curso"] ?>">
+                                                    <i class="material-icons">archive</i> Descargar Título
+                                                </a>
+                                            <?php 
+                                            }else{ ?>
+                                                <p class="text-primary">No hay archivos disponibles para descargar</p>
+                                            <?php } ?>
+                                            </li>    
+                                    <?php } ?>
+                                    </ul>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>

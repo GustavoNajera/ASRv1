@@ -1,7 +1,7 @@
   <!-- Navbar -->
   <div id="menu_per">
 
-    <nav class="teal">
+    <nav class="degradado">
       <div class="container-fluid">
         <div class="nav-wrapper">
             <a href="#" data-target="mobile-nav" class="sidenav-trigger">

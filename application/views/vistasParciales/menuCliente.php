@@ -200,7 +200,7 @@
 <script>
     function cambiaIdioma(idioma){
         $.ajax({
-            url : '/ASR/cLogin/cambiaIdioma',
+            url : '/ASRv1/cLogin/cambiaIdioma',
             async:false,
             data : { idioma : idioma },
             type : 'POST',

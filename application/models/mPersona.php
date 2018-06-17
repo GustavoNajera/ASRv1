@@ -35,10 +35,10 @@ class mPersona extends CI_Model
 			$this->db->where('p.id', $id_persona);
 		}
 		if ($nombre != null){
-			$this->db->where( ('p.nombre like "%' . $nombre . '%"') );
+			$this->db->where( ('LOWER(p.nombre) like "%' . strtolower($nombre) . '%"') );
 		}
 		if($apellido != null){
-			$this->db->where( ('p.primer_apellido like "%' . $apellido . '%" OR p.segundo_apellido like "%' . $apellido . '%"') );
+			$this->db->where( ('LOWER(p.primer_apellido) like "%' . strtolower($apellido) . '%" OR p.segundo_apellido like "%' . $apellido . '%"') );
 		}
 
 		if ($fecha_matriculado != null || $fecha_finalizado != null){
