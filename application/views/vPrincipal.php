@@ -37,21 +37,21 @@
   <section class="section section-icons grey lighten-4 center">
     <div class="container">
       <div class="row scrollflow -slide-left -opacity">
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
           <div class="card-panel alto1">
             <i class="material-icons large green-text">room</i>
             <h4>Multipais</h4>
             <p>Contamos con experiencia en multiples paises, donde capacitamos con los mayores estandares.</p>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
           <div class="card-panel alto1">
             <i class="material-icons large green-text">store</i>
             <h4>Tienda</h4>
             <p>Proximamente dispondremos de tienda en línea para que pueda adquirir los productos de alta calidad.</p>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m6 l4">
           <div class="card-panel alto1">
             <i class="material-icons large green-text">backup</i>
             <h4>Mi perfil en línea</h4>
@@ -72,11 +72,11 @@
       </div>
       <div class="row">
         <?php foreach($listCategoria as $item): ?>
-        <div class="col s12 m3 l2">
+        <div class="col s6 m4 l2">
           <div class="card elemento_activo">
             <div class="card-image">
               <a title="Ver más" href="<?= base_url();?>cCursos/detalle" class="waves-effect green-text text-darken-3">
-                <img class="img_categorias" src="<?php echo base_url() . $item["categoria"]["img"] ?>" alt="">
+                <img class="img_categorias materialboxed" src="<?php echo base_url() . $item["categoria"]["img"] ?>" alt="">
               </a>
             </div>
             <div class="card-content center-align">
@@ -91,7 +91,7 @@
     </div>
   </section>
 
-  <!-- Section: Follow -->
+  <!-- Section: Empresas asociadas -->
   <section class="section section-follow grey darken-4 white-text center">
     <div class="container">
       <div class="row scrollflow -slide-right -opacity">
@@ -110,51 +110,14 @@
 
   <!-- Section: Gallery -->
   <section id="gallery" class="section section-gallery scrollspy">
-    <div class="container scrollflow -pop -opacity">
+    <div class="container">
       <h4 class="center"><?= $listPalabras["titulo seccion galeria"] ?></h4>
       <div class="row">
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?beach" alt="" class="materialboxed responsive-img">
+        <?php foreach($listImgGallery as $imgGallery): ?>
+        <div class="left">
+            <img class="img_gallery materialboxed" src="<?= base_url().$imgGallery["img"] ?>">
         </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?travel" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?nature" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?beach, travel" alt="" class="materialboxed responsive-img">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?water" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?building" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?trees" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?cruise" alt="" class="materialboxed responsive-img">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?beaches" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?traveling" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?bridge" alt="" class="materialboxed responsive-img">
-        </div>
-        <div class="col s12 m3">
-          <img src="https://source.unsplash.com/1600x900/?beach, travel,boat" alt="" class="materialboxed responsive-img">
-        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
@@ -234,7 +197,7 @@
         <div class="col s12 m6 z-depth-2">
           <!-- Carousel -->
           <div class="scrollflow -slide-top -opacity">
-            <div class="carousel carousel-slider">            
+            <div class="carousel carousel-slider alto2">            
 
               <?php if($this->session->userdata('id') != null){ ?>
                 <div class="carousel-fixed-item center">

@@ -9,7 +9,7 @@
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                    <p> <?= $empresaASR->mision ?> </p>
+                    <p class="text_justificar"><?= $empresaASR->mision ?> </p>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                    <p> <?= $empresaASR->vision ?> </p>
+                    <p class="text_justificar"><?= $empresaASR->vision ?> </p>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                    <p> <?= $empresaASR->historia ?> </p>
+                    <p class="text_justificar"><?= $empresaASR->historia ?> </p>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
-                    <p> <?= $empresaASR->experiencia ?> </p>
+                    <p class="text_justificar"><?= $empresaASR->experiencia ?> </p>
                     </div>
                 </div>
             </div>

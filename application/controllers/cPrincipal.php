@@ -14,45 +14,6 @@ class cPrincipal extends CI_Controller
         $this->idioma = $iTem;
     }
 
-    /*
-    * Respaldo 
-    */
-    public function respaldo($result = null){
-        $data["listImgCarousel"]     = $this->mImgCarousel->listImgCliente($this->idioma);
-        $data["listCategoria"]       = $this->mCategoria->listCatCliente($this->idioma);
-        $data["listInvolucrados"]    = $this->mPersona->listPersonaCliente($this->idioma);
-        $data["empresaASR"]          = $this->mEmpresa->listEmpresaCliente($this->idioma);
-        $data["listEmpresaAsociada"] = $this->mEmpresaAsociada->listEmpresaCliente($this->idioma);
-        $data["listComentario"]      = $this->mComentario->listComentarioCliente();
-        $data["listPalabras"]        = $this->mPalabras->listPalabrasCliente("inicio", $this->idioma);
-
-        /****/
-        $listCategoria = Array();
-        foreach ($data["listCategoria"] as $categoria):
-            $listCaract = $this->mCaractCat->listCaractCliente($categoria["id"],$this->idioma);
-            $listCategoria[] = array("categoria"       => $categoria
-                                  ,"listCaract"        => $listCaract);
-        endforeach;
-        $data["listCategoria"] = $listCategoria;
-
-        /****/
-        $listPalabrasTem = Array();
-        foreach ($data["listPalabras"] as $palabra):
-            $listPalabrasTem[ $palabra["palabra_key"] ]  =  $palabra["valor"];
-        endforeach;
-        $listPalabrasTem["logo"]  = $this->mEmpresa->obtenerLogoCliente($this->idioma)->logo;
-        $data["listPalabras"]     =   $listPalabrasTem;
-        
-        /****/
-        if ($result != null){
-            $data["result"] = $result;
-        }
-        $this->load->view("vistasParciales/head.php");
-        $this->load->view("vistasParciales/menuCliente.php", $data);
-        $this->load->view("respaldo Principal");
-        $this->load->view("vistasParciales/footer.php");
-    }
-
     /**
      * PRINCIPAL
      */
@@ -65,6 +26,7 @@ class cPrincipal extends CI_Controller
         $data["listComentario"]      = $this->mComentario->listComentarioCliente();
         $data["listPalabras"]        = $this->mPalabras->listPalabrasCliente("inicio", $this->idioma);
         $data["listCursos"]          = $this->mCurso->listCursoCliente($this->idioma);
+        $data["listImgGallery"]      = $this->mGallery->listImg();
 
         /****/
         $listCategoria = Array();

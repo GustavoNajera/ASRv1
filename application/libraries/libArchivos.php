@@ -17,6 +17,7 @@ class libArchivos{
                         ,"empresaAsociada"   => "./public/images/imgEmpresaAsociada/"
                         ,"titulos"           => "./public/archivos/titulos/"
                         ,"carousel"          => "./public/images/imgCarousel/"
+                        ,"gallery"           => "./public/images/imgGallery/"
                 )
                 ,"formatos" => array(
                         "img"     => "gif|jpg|jpeg|png"
@@ -109,6 +110,11 @@ class libArchivos{
     //Inicializa configuracion para las imagenes del carousel
     public function configImgCarousel(){
         return $this->inicializa("carousel", "img");
+    }
+
+    //Inicializa configuracion para las imagenes de la galeria
+    public function configGallery(){
+        return $this->inicializa("gallery", "img");
     }
 }
 ?>

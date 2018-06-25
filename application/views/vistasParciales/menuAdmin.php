@@ -96,6 +96,9 @@
                     <a href="<?php echo base_url(); ?>ImgCarousel">Carousel</a>
                 </li>
                 <li>
+                    <a href="<?php echo base_url(); ?>cGallery">Galería</a>
+                </li>
+                <li>
                     <a href="<?php echo base_url(); ?>cPalabras">Textos</a>
                 </li>
                 <li>
@@ -106,6 +109,13 @@
       </div>
     </nav>
   </div>
+
+
+
+  <!-- MOVIL -->
+
+
+
   <ul class="sidenav" id="mobile-nav">
     <!-- MATRICULA -->
     <ul id="dropdown-matricula2" class="dropdown-content">
@@ -192,6 +202,11 @@
     <li>
         <a href="<?php echo base_url(); ?>ImgCarousel">Carousel</a>
     </li>
+    
+    <li>
+        <a href="<?php echo base_url(); ?>cGallery">Galería</a>
+    </li>
+
     <li>
         <a href="<?php echo base_url(); ?>cPalabras">Textos</a>
     </li>

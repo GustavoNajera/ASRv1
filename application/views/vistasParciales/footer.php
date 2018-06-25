@@ -9,6 +9,16 @@
         </footer>
     </body>
 
+    <script>
+        /* Permite que el footer se mantenga al final de la pantalla */
+        $(document).ready(function(){
+            if( $(window).height() > $("body").height() ){
+                $("footer").css("position", "fixed");
+                $("footer").css("bottom", "0px");
+                $("footer").css("width", "100%");
+            }
+        });
+    </script>
     
     <script src="<?php echo base_url(); ?>public/js/eskju.jquery.scrollflow.js"></script>
 
@@ -97,6 +107,10 @@
         $(document).ready(function(){
             $('.modal').modal();
         });
+
+        // Imágenes
+        $('.materialboxed').materialbox();
+       
                 
 
 

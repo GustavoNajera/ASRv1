@@ -17,7 +17,7 @@
                 ?>
                     
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i> <?= $infoGeneral["nombre"] ?> </div>
-                        <div class="collapsible-body"><span><?= $infoGeneral["descripcion"] ?></span></div>
+                        <div class="collapsible-body text_justificar"><span><?= $infoGeneral["descripcion"] ?></span></div>
                     </li>
                 
                 <?php endforeach; ?>

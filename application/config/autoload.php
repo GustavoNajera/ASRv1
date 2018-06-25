@@ -134,4 +134,5 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array('mPersona','mLogin','mRol', 'mEmpresa','mEmpresaAsociada','mCurso', 'mPalabras',
                             'mCategoria','mNivel','mCaractCat','mInfoGeneral','mLogros', 'mExpedienteRetiroTitulo',
-                            'mEstado', 'mExpedienteGeneral', 'mPais', 'mCaractCurso', "mImgCarousel", "mComentario");
+                            'mEstado', 'mExpedienteGeneral', 'mPais', 'mCaractCurso', "mImgCarousel",
+                            "mComentario", "mGallery");

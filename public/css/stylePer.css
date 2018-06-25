@@ -40,7 +40,7 @@
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: "Kaushan Script" !important;
+    font-family: "Maiandra GD" !important;
     text-shadow: 1px 1px 1px #aaa !important;
     margin: 10px;
 }
@@ -63,7 +63,11 @@ a{
 
 /* Alto de elementos */
 .alto1{
-    height: 430px !important;
+    height: 400px !important;
+}
+
+.alto2{
+    height: 150px !important;
 }
 
 /*  HOVER  */
@@ -97,6 +101,12 @@ color: #1b5e20;
     .img_categorias{
         height: 300px;
     }
+}
+
+/* Colocar adentro */
+.btn_interior{
+    position: relative;
+    bottom: 35px;
 }
 
 /******************/
@@ -156,4 +166,14 @@ color: #1b5e20;
 /* Resuelve problema con los dropdown */
 .dropdown-content {
     width: auto !important;
+}
+
+/*********************************************
+* Elementos especificos
+**********************************************/
+
+.img_gallery{
+    height: 100px;
+    width: auto;
+    margin: 1px;
 }

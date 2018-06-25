@@ -3,7 +3,7 @@
         <div class="">
             <img class="left" src="<?php echo base_url() . $empresaASR->logo ?>"  width="130" >
               <div class="left text_title">
-                <h5 class="green-text text-darken-3"><b><?= $empresaASR->nombre ?></b></h5>
+                <h4 class="green-text text-darken-3"><b><?= $empresaASR->nombre ?></b></h4>
                 <h6 class="grey-text text-darken-2"><i class="material-icons">call</i> <?= $empresaASR->numero ?></h6>
                 <h6 class="grey-text text-darken-2"><i class="material-icons">email</i> <?= $empresaASR->correo ?></h6>
               </div>
