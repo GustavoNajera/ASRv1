@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="input-field col m3">
-                        <input type="text" class="datepicker validate" name="primer_apellido" id="primer_apellido" required>
+                        <input type="text" class="validate" name="primer_apellido" id="primer_apellido" required>
                         <label for="primer_apellido">Primer apellido</label>
                     </div>
 
@@ -43,7 +43,7 @@
                 <div class="row">
                     <div class="input-field col m3">
                         <input type="text" class="validate" name="numero" id="numero" required>
-                        <label for="numero">Número</label>
+                        <label for="numero">Teléfono</label>
                     </div>
 
                     <div class="input-field col m3">
@@ -85,7 +85,7 @@
                         <div class="file-field input-field">
                             <div class="btn light-green darken-1">
                                 <span>Imagen</span>
-                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="img" required>
+                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF" name="img" required>
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">

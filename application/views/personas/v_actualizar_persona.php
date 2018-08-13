@@ -1,23 +1,32 @@
 <!-- SECCION PARA ACTUALIZAR LAS EMPRESAS ASOCIADAS -->
 <section>
-    <div class="container">        
-
+    <div class="container">
+        
+        <?php
+            $persona = $listPersona[0];
+        ?>
+        
         <!-- FORMULARIO PARA REGISTRAR NUEVO ELEMENTO -->
         <div class="row">
-            <div class="col s12 margin_top_detalle">            
-                <div class="text-center">
-                    <h1>PERSONAS.</h1>
-                    <p>A continuación se muestran los datos que puede editar, asegurese de no dejar ningún campo vacío.</p> <br><br>
+            <div class="col s12 m6">
+                <div class="card medium">
+                    <div class="card-image">
+                        <img src="<?= base_url() . $persona['img'] ?>" >
+                        <span class="card-title"><?= $persona['nombre'] . ' ' . $persona['primer_apellido'] ?></span>
+                    </div>
+                    <div class="card-content">
+                        <p><?= $persona['nombre'] . ' ' . $persona['primer_apellido'] . ' ' . $persona["segundo_apellido"] ?></p>
+                        <p><?= $persona['pais'] ?></p>
+                        <p><?= $persona['correo'] ?></p>
+                    </div>
                 </div>
             </div>
         </div>
 
+
+
         <!-- Validaciones -->
         <?php include_once('application/views/vistasParciales/validaciones.php');?>
-
-        <?php
-            $persona = $listPersona[0];
-        ?>
 
         <div class="row">
             <form enctype="multipart/form-data" action="<?php echo base_url(); ?>/cPersona/actualizarPersonaAccion?id=<?= $persona['id_persona'] ?>" method="post">
@@ -103,7 +112,7 @@
                         <div class="file-field input-field">
                             <div class="btn light-green darken-1">
                                 <span>Imagen</span>
-                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="img">
+                                <input type="file" name="img" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">

@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col s12 margin_top_detalle">            
                 <div class="text-center">
-                    <h1>Ingresar una Cagtegoría</h1>
+                    <h1>Ingresar una Categoría</h1>
                     <p>A continuación se muestran los datos necesarios para ingresar un nuevo registro</p> <br><br>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                         <div class="file-field input-field">
                             <div class="btn light-green darken-1">
                                 <span>Imagen</span>
-                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="img" required>
+                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF" name="img" required>
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
@@ -87,10 +87,11 @@
             
             <div class="row">
                 <div class="input-field col m6">
+                    <img src="<?= base_url() . $categoria['img'] ?>" class="img_200">
                     <div class="file-field input-field">
                         <div class="btn light-green darken-1">
                             <span>Imagen</span>
-                            <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="img">
+                            <input type="file" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF" name="img">
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text">

@@ -100,10 +100,11 @@
 
                 <div class="row">
                     <div class="input-field col m5">
+                        <img src="<?= base_url() . $empresa['logo_es'] ?>" class="img_200"> 
                         <div class="file-field input-field">
                             <div class="btn light-green darken-1">
                                 <span>Logo Español</span>
-                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="logo_es">
+                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF" name="logo_es">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
@@ -112,10 +113,11 @@
                     </div>
 
                     <div class="input-field col m5">
+                        <img src="<?= base_url() . $empresa['logo_in'] ?>" class="img_200"> 
                         <div class="file-field input-field">
                             <div class="btn light-green darken-1">
                                 <span>Logo Inglés</span>
-                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="logo_in">
+                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF" name="logo_in">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">

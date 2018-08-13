@@ -33,9 +33,11 @@
                     <li>
                         <a href="<?php echo base_url(); ?>cPersona">Lista de Personas</a>
                     </li>
+                    <!--
                     <li>
-                        <a href="<?php echo base_url(); ?>cRol">Roles</a>
+                        <a href="<?php /* echo base_url(); */ ?>cRol">Roles</a>
                     </li>
+                    -->
                 </ul>
                 <li>
                     <a class="dropdown-personas1" href="#!" data-target="dropdown-personas1">Personas
@@ -141,9 +143,11 @@
         <li>
             <a href="<?php echo base_url(); ?>cPersona">Lista de Personas</a>
         </li>
+        <!--
         <li>
-            <a href="<?php echo base_url(); ?>cRol">Roles</a>
+            <a href="<?php /* echo base_url(); */ ?>cRol">Roles</a>
         </li>
+        -->
     </ul>
     <li>
         <a class="dropdown-personas2" href="#!" data-target="dropdown-personas2">Personas

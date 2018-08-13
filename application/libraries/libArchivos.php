@@ -20,8 +20,8 @@ class libArchivos{
                         ,"gallery"           => "./public/images/imgGallery/"
                 )
                 ,"formatos" => array(
-                        "img"     => "gif|jpg|jpeg|png"
-                        ,"texto"  => "pdf|txt|docx"
+                        "img"     => "gif|jpg|jpeg|png|JPG|PNG|JPEG|GIF"
+                        ,"texto"  => "pdf|txt|docx|PDF|TXT|DOCX|PDF|TXT"
                 )
             );
 

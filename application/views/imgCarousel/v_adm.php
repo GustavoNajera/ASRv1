@@ -49,7 +49,7 @@
                         <div class="file-field input-field">
                             <div class="btn light-green darken-1">
                                 <span>Imagen</span>
-                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="img" required>
+                                <input type="file" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF" name="img" required>
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text">
@@ -112,10 +112,11 @@
             
             <div class="row">
                 <div class="input-field col m6">
+                    <img src="<?= base_url() . $img['ruta'] ?>" class="img_200">
                     <div class="file-field input-field">
                         <div class="btn light-green darken-1">
                             <span>Imagen</span>
-                            <input type="file" accept="application/, .jpg, .png, .jpeg, .gif" name="img">
+                            <input type="file" accept="application/, .jpg, .png, .jpeg, .gif, .JPG, .PNG, .JPEG, .GIF" name="img">
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text">

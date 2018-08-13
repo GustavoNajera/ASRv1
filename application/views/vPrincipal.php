@@ -9,9 +9,11 @@
       <li>
         <img src="<?php echo base_url() . $item["ruta"] ?>">
         <!-- random image -->
-        <div class="caption center-align font_title1">
-          <h2><?= $item["titulo"]?></h2>
-          <h5 class="light grey-text text-lighten-3"><?= $item["desc"]?></h5>
+        <div class="container-fluid">
+          <div class="caption font_title1" style="width: 50%;">
+            <h2><?= $item["titulo"]?></h2>
+            <h5 class="light grey-text text-lighten-3"><?= $item["desc"]?></h5>
+          </div>
         </div>
       </li>
      
@@ -34,6 +36,7 @@
   </section>
 
   <!-- Section: Icon Boxes -->
+  <!--
   <section class="section section-icons grey lighten-4 center">
     <div class="container">
       <div class="row scrollflow -slide-left -opacity">
@@ -61,6 +64,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- Section: Cursos -->
   <section id="cursos" class="section section-cursos scrollspy scrollflow -pop -opacity">
@@ -189,8 +193,8 @@
               <p><?= $listPalabras["descripcion de seccion sobre nosotros"]; ?></p>
             </div>
             <ul class="collection with-header">
-              <li class="collection-item"><?= $empresaASR->correo; ?> </li>
-              <li class="collection-item"><?= $empresaASR->numero; ?></li>
+              <li class="collection-item"><i class="material-icons">email</i> <?= $empresaASR->correo; ?> </li>
+              <li class="collection-item"><i class="material-icons">call</i> <?= $empresaASR->numero; ?></li>
             </ul>
           </div>
         </div>
@@ -199,14 +203,11 @@
           <div class="scrollflow -slide-top -opacity">
             <div class="carousel carousel-slider alto2">            
 
-              <?php if($this->session->userdata('id') != null){ ?>
-                <div class="carousel-fixed-item center">
-                  <a class="light-green darken-4 waves-effect waves-light btn modal-trigger" href="#modal1">
-                    <i class="material-icons">comment</i> Comentar
-                  </a>
-                </div>
-              <?php } ?>
               
+              <?php if (count($listComentario) == 0){ ?>
+                <div class="carousel-item" href="#one!"></div>
+              <?php }?>
+
               <?php foreach ($listComentario as $comentario): ?>
                 <div class="carousel-item " href="#one!">
                   <h2>
@@ -221,6 +222,14 @@
             </div>
           </div>          
       </div>
+
+      <?php if($this->session->userdata('id') != null){ ?>
+        <div class="carousel-fixed-item right marg_1">
+          <a class="light-green darken-4 waves-effect waves-light btn modal-trigger" href="#modal1">
+            <i class="material-icons">comment</i> Comentar
+          </a>
+        </div>
+      <?php } ?>
     </div>
 
     <!-- Modal Structure -->

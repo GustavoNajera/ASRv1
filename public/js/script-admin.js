@@ -79,7 +79,7 @@ function cambioEstadoAjax(controlador, id, estado, callback){
 
     $.ajax({
         // la URL para la petición
-        url : '/ASR/'+controlador+'/cambioEstado',
+        url : '/ASRv1/'+controlador+'/cambioEstado',
         async:false,
         data : { id : id, estado : estado },
         type : 'POST',
