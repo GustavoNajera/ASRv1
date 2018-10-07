@@ -60,7 +60,7 @@ class cCursos extends CI_Controller
      * Mapa con listado de cursos
      */
     public function mapa(){        
-        $data["listCursos"] = $this->mCurso->listCursoCliente($this->idioma);
+        $data["listCursos"] = $this->mCurso->listCursoCliente($this->idioma, "null", "null");
         $data["listPalabras"]        = $this->mPalabras->listPalabrasCliente("mapa", $this->idioma);
 
         $listPalabrasTem = Array();
@@ -81,9 +81,11 @@ class cCursos extends CI_Controller
      * Detalle cursos
      */
     public function detalle(){
+        $id = $this->input->get('id');
+
         $data["empresaASR"]          = $this->mEmpresa->listEmpresaCliente($this->idioma);
         $data["listPalabras"]        = $this->mPalabras->listPalabrasCliente("list cursos", $this->idioma);
-        $data["listCursos"] = $this->mCurso->listCursoCliente($this->idioma);
+        $data["listCursos"]          = $this->mCurso->listCursoCliente($this->idioma, "null", $id);
         $listCursos = Array();
         
         foreach ($data["listCursos"] as $curso):
@@ -117,7 +119,7 @@ class cCursos extends CI_Controller
 
         $data["empresaASR"]          = $this->mEmpresa->listEmpresaCliente($this->idioma);
         $data["listPalabras"]       = $this->mPalabras->listPalabrasCliente("detalle de un curso", $this->idioma);
-        $data["cursoTem"]           = $this->mCurso->listCursoCliente($this->idioma, $id);
+        $data["cursoTem"]           = $this->mCurso->listCursoCliente($this->idioma, $id, "null");
         $curso = array_values( $data["cursoTem"] )[0];
 
         $listCaract = $this->mCaractCurso->listCaractCliente($curso["id"],$this->idioma);

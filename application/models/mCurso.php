@@ -15,7 +15,12 @@ class mCurso extends CI_Model
 	/******************************************
 	 * Lista de cursos para lado de cliente
 	 *****************************************/
-	public function listCursoCliente($idioma = "ES", $idCurso = 'null'){
+	public function listCursoCliente($idioma = "ES", $idCurso = 'null', $idCategoria = "null"){
+
+		$filtro = '';
+		if ($idCategoria != "null" && $idCategoria != null){
+			$filtro = 'ca.id = ' . $idCategoria . ' and ';
+		}
 
 		//Si es listado se ordena, si es una persona se hace el filtrado
 		if($idioma == "ES"){
@@ -36,7 +41,7 @@ class mCurso extends CI_Model
 		$this->db->join("t_categoria ca", "ca.id = c.categoria");
 		$this->db->join("t_pais p", "p.id = c.pais");
 		$this->db->join("t_persona per", "per.id = c.instructor");
-		$this->db->where('c.id = IFNULL('.$idCurso.', c.id) and c.activo =', true);
+		$this->db->where($filtro . 'c.id = IFNULL('.$idCurso.', c.id) and c.activo =', true);
 		return $this->db->get()->result_array();
 		
 	}

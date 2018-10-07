@@ -79,7 +79,7 @@
         <div class="col s6 m4 l2">
           <div class="card elemento_activo">
             <div class="card-image">
-              <a title="Ver más" href="<?= base_url();?>cCursos/detalle" class="waves-effect green-text text-darken-3">
+              <a title="Ver más" href="<?= base_url();?>cCursos/detalle?id=<?= $item["categoria"]["id"] ?>" class="waves-effect green-text text-darken-3">
                 <img class="img_categorias materialboxed" src="<?php echo base_url() . $item["categoria"]["img"] ?>" alt="">
               </a>
             </div>
