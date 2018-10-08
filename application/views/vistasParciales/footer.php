@@ -20,14 +20,14 @@
         });
     </script>
     
-    <script src="<?php echo base_url(); ?>public/js/eskju.jquery.scrollflow.js"></script>
+    <script src="<?php echo base_url(); ?>public/js/Eskju.jquery.scrollflow.js"></script>
 
     <!-- SCRIPT ADMIN -->
-    <script src="<?php echo base_url(); ?>public/js/script-admin.js"></script>
-    <script src="<?php echo base_url(); ?>public/js/alertify.js"></script>
+    <script src="<?php echo base_url(); ?>public/js/Script-admin.js"></script>
+    <script src="<?php echo base_url(); ?>public/js/Alertify.js"></script>
 
     <!--JavaScript at end of body for optimized loading-->
-    <script src="<?php echo base_url(); ?>public/js/materialize.js"></script>
+    <script src="<?php echo base_url(); ?>public/js/Materialize.js"></script>
 
     <script>
         $( document ).ready( function( )

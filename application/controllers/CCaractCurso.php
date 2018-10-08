@@ -66,7 +66,7 @@ class CCaractCurso extends CI_Controller
         $data["listCaract"]    = $this->mCaractCurso->listCaract();
         $this->load->view("vistasParciales/head.php");
         $this->load->view("vistasParciales/menuAdmin.php");
-        $this->load->view("caractCurso/vActualizar_caract",$data);
+        $this->load->view("caractCurso/vActualizar_Caract",$data);
         $this->load->view("vistasParciales/footer.php");
     }
     
@@ -89,7 +89,7 @@ class CCaractCurso extends CI_Controller
         $data["listCaract"]     = $this->mCaractCurso->listCaract();
         $this->load->view("vistasParciales/head.php");
         $this->load->view("vistasParciales/menuAdmin.php");
-        $this->load->view("caractCurso/vActualizar_caract",$data);
+        $this->load->view("caractCurso/vActualizar_Caract",$data);
         $this->load->view("vistasParciales/footer.php");
     }
 
@@ -106,7 +106,7 @@ class CCaractCurso extends CI_Controller
         
         $this->load->view("vistasParciales/head.php");
         $this->load->view("vistasParciales/menuAdmin.php");
-        $this->load->view("caractCurso/vActualizar_caract",$data);
+        $this->load->view("caractCurso/vActualizar_Caract",$data);
         $this->load->view("vistasParciales/footer.php");
 	}
 

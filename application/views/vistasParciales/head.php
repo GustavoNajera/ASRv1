@@ -10,25 +10,25 @@
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/materialize.css">
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/main.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/Materialize.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/Main.css">
         <title>ASR</title>
         
         <!--  MAPA -->
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.1/mapbox-gl.css' rel='stylesheet' />
-        <link href='<?php echo base_url(); ?>public/css/mapa.css' rel='stylesheet' />
+        <link href='<?php echo base_url(); ?>public/css/Mapa.css' rel='stylesheet' />
 
         <!-- Alertas -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/alertify.core.css" />
-	    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/alertify.default.css" id="toggleCSS" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/Alertify.core.css" />
+	    <link rel="stylesheet" href="<?php echo base_url(); ?>public/css/Alertify.default.css" id="toggleCSS" />
 
-        <link href="<?php echo base_url(); ?>public/css/stylePer.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>public/css/StylePer.css" rel="stylesheet" />
 
         <!-- *******************
                 SCRIPTS
         ******************* -->
-        <script src="<?php echo base_url(); ?>public/js/jquery-3.1.1.min.js"></script>
+        <script src="<?php echo base_url(); ?>public/js/Jquery-3.1.1.min.js"></script>
 
 
     </head>

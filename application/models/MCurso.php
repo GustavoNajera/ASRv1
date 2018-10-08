@@ -27,13 +27,15 @@ class mCurso extends CI_Model
 			$this->db->select('c.id, c.nombre_es as nombre, c.descripcion_es as descripcion
 					,c.resumen_es as resumen, c.pre_requisitos_es as pre_requisitos
 					,ca.nombre_es as categoria, n.nombre_es as nivel, ca.img as img
-					,p.nombre as pais, longitud, latitud, per.nombre as instructor');
+					,p.nombre as pais, longitud, latitud, per.nombre as instructor
+					,per.primer_apellido apellido_instruct');
 		}
 		else{
 			$this->db->select('c.id, c.nombre_in as nombre, c.descripcion_in as descripcion
 					,c.resumen_in as resumen, c.pre_requisitos_in as pre_requisitos
 					,ca.nombre_in as categoria, n.nombre_in as nivel, ca.img as img
-					,p.nombre as pais, longitud, latitud, per.nombre as instructor');
+					,p.nombre as pais, longitud, latitud, per.nombre as instructor
+					,per.primer_apellido apellido_instruct');
 		}
 
 		$this->db->from('t_curso c');

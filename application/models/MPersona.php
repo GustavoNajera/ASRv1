@@ -132,4 +132,15 @@ class mPersona extends CI_Model
 		return $this->db->trans_status();		
 	}
 
+	//Retorna true si el correo es viable para ser insertado o false de lo contrario
+	function validaPersona($correo){
+		$this->db->select('1');
+		$this->db->from('t_persona p');
+		$this->db->where('p.correo', $correo);
+		if ( $this->db->get()->result_array() != null){
+			return false;
+		}
+		else{ return true; }
+	}
+
 }// Fin de la clase

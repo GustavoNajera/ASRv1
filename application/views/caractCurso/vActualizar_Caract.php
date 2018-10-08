@@ -70,7 +70,7 @@
         <!-- FORMULARIO PARA ACTUALIZAR NUEVO ELEMENTO -->
         <div class="col m12 margin_top_detalle">            
             <div class="text-center">
-                <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Actualizar Expediente General</h1>
+                <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Actualizar Características de Cursos</h1>
                 <p>A continuación se muestran los estados de matrícula registrados, asegurese de no dejar ningún dato vacío.</p>
             </div>
         </div>

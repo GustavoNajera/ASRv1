@@ -39,7 +39,7 @@ class cCaractCategoria extends CI_Controller
         
         $this->load->view("vistasParciales/head.php");
         $this->load->view("vistasParciales/menuAdmin.php");
-        $this->load->view("caractCategoria/vActualizar_caract",$data);
+        $this->load->view("caractCategoria/vActualizar_Caract",$data);
         $this->load->view("vistasParciales/footer.php");
     }
 
@@ -59,7 +59,7 @@ class cCaractCategoria extends CI_Controller
         $data["listCat"]     = $this->mCategoria->listCategoria();
         $this->load->view("vistasParciales/head.php");
         $this->load->view("vistasParciales/menuAdmin.php");
-        $this->load->view("caractCategoria/vActualizar_caract",$data);
+        $this->load->view("caractCategoria/vActualizar_Caract",$data);
         $this->load->view("vistasParciales/footer.php");
     }
     
@@ -81,7 +81,7 @@ class cCaractCategoria extends CI_Controller
         $data["listCat"]     = $this->mCategoria->listCategoria();
         $this->load->view("vistasParciales/head.php");
         $this->load->view("vistasParciales/menuAdmin.php");
-        $this->load->view("caractCategoria/vActualizar_caract",$data);
+        $this->load->view("caractCategoria/vActualizar_Caract",$data);
         $this->load->view("vistasParciales/footer.php");
     }
 
@@ -98,7 +98,7 @@ class cCaractCategoria extends CI_Controller
         $data["listCat"]     = $this->mCategoria->listCategoria();
         $this->load->view("vistasParciales/head.php");
         $this->load->view("vistasParciales/menuAdmin.php");
-        $this->load->view("caractCategoria/vActualizar_caract",$data);
+        $this->load->view("caractCategoria/vActualizar_Caract",$data);
         $this->load->view("vistasParciales/footer.php");
 	}
 

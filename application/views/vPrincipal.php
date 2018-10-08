@@ -19,52 +19,7 @@
      
       <?php endforeach; ?>
     </ul>
-  </section>
-
-  <!-- Section: Search -->
-  <section id="search" class="section section-search grey darken-4 white-text center scrollspy">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 scrollflow -slide-right">
-          <h3><?= $listPalabras["titulo seccion busqueda"]?></h3>
-          <div class="input-field">
-            <input type="text" class="white grey-text autocomplete" id="autocomplete-input" placeholder="Aruba, Cancun, etc...">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section: Icon Boxes -->
-  <!--
-  <section class="section section-icons grey lighten-4 center">
-    <div class="container">
-      <div class="row scrollflow -slide-left -opacity">
-        <div class="col s12 m6 l4">
-          <div class="card-panel alto1">
-            <i class="material-icons large green-text">room</i>
-            <h4>Multipais</h4>
-            <p>Contamos con experiencia en multiples paises, donde capacitamos con los mayores estandares.</p>
-          </div>
-        </div>
-        <div class="col s12 m6 l4">
-          <div class="card-panel alto1">
-            <i class="material-icons large green-text">store</i>
-            <h4>Tienda</h4>
-            <p>Proximamente dispondremos de tienda en línea para que pueda adquirir los productos de alta calidad.</p>
-          </div>
-        </div>
-        <div class="col s12 m6 l4">
-          <div class="card-panel alto1">
-            <i class="material-icons large green-text">backup</i>
-            <h4>Mi perfil en línea</h4>
-            <p>Acceda a su historial de cursos, proximas aperturas de matricula, descarga de sus títulos y más, al alcance de un click.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
+  </section>  
 
   <!-- Section: Cursos -->
   <section id="cursos" class="section section-cursos scrollspy scrollflow -pop -opacity">
@@ -84,7 +39,7 @@
               </a>
             </div>
             <div class="card-content center-align">
-              <a title="Ver más" href="<?= base_url();?>cCursos/detalle" class="waves-effect green-text text-darken-4">
+              <a title="Ver más" href="<?= base_url();?>cCursos/detalle?id=<?= $item["categoria"]["id"] ?>" class="waves-effect green-text text-darken-4">
                 <h6><b><?= $item["categoria"]["nombre"]?></b></h6>
               </a>
             </div>
@@ -133,7 +88,7 @@
       <div class="row">
       <h4 class="center green-text text-darken-3">
         <i class="material-icons">location_on</i> <?= $listPalabras["titulo mapa"] ?></h4>
-        <div class='sidebar col s12 m4' style="border-bottom: 2px solid green; border-right: 2px solid green; margin-bottom:25px;">
+        <div class='sidebar col s12 m4' style="border-bottom: 2px solid green; border-right: 2px solid green; margin-bottom:25px; ">
             <div class="scrollflow -slide-left -opacity">
               <div id='listings' class='listings'></div>
             </div>
@@ -253,4 +208,4 @@
   </section>
 
 <!-- MAPA -->
-<script src="<?php echo base_url(); ?>public/js/mapa.js"></script>
+<script src="<?php echo base_url(); ?>public/js/Mapa.js"></script>

@@ -150,9 +150,10 @@ class cPersona extends CI_Controller
 			$this->mPersona->isertarPersona($param);
 		}
 
+		$data["listRol"] = $this->mRol->listRol();
 		$this->load->view('vistasParciales/head');
         $this->load->view("vistasParciales/menuAdmin.php");
-		$this->load->view('personas/v_insertar_persona');
+		$this->load->view('personas/v_insertar_persona',$data);
 		$this->load->view('vistasParciales/footer');
 	}
 
@@ -299,5 +300,24 @@ class cPersona extends CI_Controller
         $this->load->view("vistasParciales/menuAdmin.php");
 		$this->load->view('personas/v_actualizar_persona', $data);
 		$this->load->view('vistasParciales/footer');
+	}
+
+	function validaPersona(){
+		// True es que no ubo ningún problema y false es porque existe algún error
+		
+		if ($this->input->post("correo")){
+			$correo = $this->input->post("correo");
+
+			// Valida que el campo no venga vacio y que no este en BD
+			if($correo != null && $correo != ""){
+				echo $this->mPersona->validaPersona($correo);
+			}
+			else{
+				echo false;
+			}//FIn
+			
+		}else{
+			echo false;
+		}
 	}
 }

@@ -16,7 +16,7 @@
         <?php include_once('application/views/vistasParciales/validaciones.php');?>
 
         <div class="row">
-            <form enctype="multipart/form-data" action="<?php echo base_url(); ?>/cPersona/insertarPersona" method="post">
+            <form enctype="multipart/form-data" action="<?php echo base_url(); ?>/cPersona/insertarPersona" id="form-add-pers" method="post">
 
                 <div class="row">
                     <div class="input-field col m3">
@@ -94,7 +94,7 @@
                     </div>
                     
                     <div class="input-field col m3">
-                        <button type="submit" class="btn btn-success">Ingresar</button>
+                        <button type="button" id="btnIngresar" class="btn btn-success">Ingresar</button>
                     </div>
                 </div>
 
@@ -104,3 +104,48 @@
 
     </div>
 </section>
+
+
+
+
+
+<script>
+
+
+
+
+
+
+    $(function(){
+
+        $("#btnIngresar").click(
+            function(){
+                /******* Validar correo *********/
+                $.ajax({
+                    type: "POST",
+                    url: "<?= base_url() ?>CPersona/validaPersona",
+                    data: {correo: $("#correo").val()},
+                    success: function(response){
+                        if(response == true){
+                            $("#correo").css("border-bottom", "solid 2px green");
+                            $("#form-add-pers").submit();
+                        }
+                        else{
+                            $("#correo").css("border-bottom", "solid 2px red");
+                        }
+                    },
+                    error: function(response){
+                        alert("Problema para conectar con el servidor");
+                    }
+                });
+
+            }
+        );
+
+    });
+</script>
+
+
+
+
+

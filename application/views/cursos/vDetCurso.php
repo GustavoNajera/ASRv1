@@ -26,7 +26,7 @@
                     <p><b><?= $listPalabras["categoria"] ?>:   </b><?= $curso["categoria"]?></p>
                     <p><b><?= $listPalabras["nivel"] ?>:       </b><?= $curso["nivel"]?></p>
                     <p><b><?= $listPalabras["pais"] ?>:        </b><?= $curso["pais"]?></p>
-                    <p><b><?= $listPalabras["instructor"] ?>:  </b><?= $curso["instructor"]?> </p>
+                    <p><b><?= $listPalabras["instructor"] ?>:  </b><?= $curso["instructor"] . ' ' . $curso["apellido_instruct"] ?> </p>
                 </div>
             </div>
 
