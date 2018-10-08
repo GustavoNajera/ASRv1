@@ -171,7 +171,7 @@
 <script>
     function cambiaIdioma(idioma){
         $.ajax({
-            url : '/ASRv1/cLogin/cambiaIdioma',
+            url : '<?= base_url() ?>ASRv1/cLogin/cambiaIdioma',
             async:false,
             data : { idioma : idioma },
             type : 'POST',
